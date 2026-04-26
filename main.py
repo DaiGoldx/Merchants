@@ -2,12 +2,15 @@ import pygame
 from constants import *
 from debugdraw import draw_grid_dots
 from gameobject import GameObject
+from player import Player
+from gamedata import get_clickable_tiles
 
 def main():
     print("Hello from merchants!")
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    test = GameObject(70,70)
+    test = Player(70,70)
+    print(get_clickable_tiles()[0][1])
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
