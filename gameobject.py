@@ -11,4 +11,7 @@ class GameObject(pygame.sprite.Sprite):
         pygame.draw.circle(screen, "White", self.position, 10, 0)
     def update(self):
         pass
+    def collides_with(self, other):
+        if self.position == other.position:
+            return True
         

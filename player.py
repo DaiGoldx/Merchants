@@ -22,5 +22,6 @@ class Player(GameObject):
                    self.position = tile
 
 
+
             
         
