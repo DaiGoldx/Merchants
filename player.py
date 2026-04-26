@@ -1,7 +1,7 @@
 import pygame
 from gameobject import GameObject
 from constants import *
-from gamedata import get_clickable_tiles
+
 
 class Player(GameObject):
     def __init__(self, pos_x, pos_y):
@@ -14,10 +14,10 @@ class Player(GameObject):
             and self.position[1] <= y_2
         )       
     def update(self):
-        mouse_buttom = pygame.mouse.get_pressed()[0]
-        if(mouse_buttom == True):
+        mouse_buttom1 = pygame.mouse.get_pressed()[0]
+        if(mouse_buttom1 == True):
             self.position = pygame.mouse.get_pos()
-            for tile in get_clickable_tiles():
+            for tile in CLICKABLE_TILES:
                 if(self.in_area(tile[0] - 20, tile[1] - 20, tile[0] + 20, tile[1] + 20)):
                    self.position = tile
 
