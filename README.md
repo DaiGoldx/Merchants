@@ -1,0 +1,1 @@
+Hi! DaiGoldx here. This project is about a game called Merchants. It is a traveling merchant simulator.
