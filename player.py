@@ -4,8 +4,9 @@ from constants import *
 
 
 class Player(GameObject):
-    def __init__(self, pos_x, pos_y):
-        super().__init__(pos_x, pos_y)
+    def __init__(self, pos_x, pos_y, name):
+        super().__init__(pos_x, pos_y, name)
+        self.gold = STARTING_GOLD
     def in_area(self, x_1, y_1, x_2, y_2):
         return (
             self.position[0] >= x_1
